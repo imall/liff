@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="index.css" />
-  <title>LIFF Starter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>透過AI小幫手聯絡房仲</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/uno.global.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 </head>
 <body>
-  <div class="home">
-    <h1 class="home__title">
-      Welcome to <br /><a class="home__title__link" href="https://developers.line.biz/en/docs/liff/overview/">LIFF
-        Starter!</a>
-    </h1>
-    <div class="home__badges">
-      <span class="home__badges__badge badge--primary"> LIFF Starter </span>
-      <span class="home__badges__badge badge--secondary"> vanilla </span>
-      <span class="home__badges__badge badge--tertiary"> 0.1.0 </span>
-      <a href="https://github.com/line/line-liff-v2-starter" target="_blank" rel="noreferrer"
-        class="home__badges__badge badge--secondary">
-        GitHub
-      </a>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+
+    <div class="w-full font-mono">
+        <div class="w-80% m-a ">
+            <div class="scope w-full mb-8">
+                <label class="block font-bold my-3 text-xl">聯絡資料</label>
+                <input class="w-full  box-border p-2 font-bold b b-solid b-#ccc placeholder-#ccc  mb-3" type="text" maxlength="10"
+                    placeholder="您的稱呼(10字內)">
+                <input class="w-full  box-border p-2 font-bold b b-solid b-#ccc placeholder-#ccc" type="text" placeholder="您的手機號碼">
+            </div>
+            <div class="scope w-full mb-10">
+                <label class="block font-bold my-3 text-xl">想問什麼(非必填)</label>
+                <textarea class="w-full rounded-1 resize-none overflow-hidden h-5em box-border p-2 b b-solid b-#ccc placeholder-#ccc"
+                    type="text" maxlength="50" placeholder="請入你的問題或備註，AI小幫手會先傳達給房仲經紀人(限50個字)"></textarea>
+            </div>
+
+            <button
+                class="w-full mb-5 rounded-2xl border-none py-3 text-20px text-white font-bold bg-[#8E6FA7]">送出並同意房仲聯絡</button>
+            <div class="w-full flex items-start">
+                <input class="mr-2" type="checkbox">
+                <span class="text-gray-400">
+                    我已閱讀並同意本網站的 <a href="#" class="text-gray-400">服務條款</a>、<a href="#" class="text-gray-400">隱私聲明</a>、<a
+                        href="#" class="text-gray-400">免責聲明</a>
+                </span>
+            </div>
+        </div>
+
     </div>
-    <div class="home__buttons">
-      <a href="https://developers.line.biz/en/docs/liff/developing-liff-apps/" target="_blank" rel="noreferrer"
-        class="home__buttons__button button--primary">
-        LIFF Documentation
-      </a>
-      <a href="https://liff-playground.netlify.app/" target="_blank" rel="noreferrer"
-        class="home__buttons__button button--tertiary">
-        LIFF Playground
-      </a>
-      <a href="https://developers.line.biz/console/" target="_blank" rel="noreferrer"
-        class="home__buttons__button button--secondary">
-        LINE Developers Console
-      </a>
-    </div>
-  </div>
-</body>
-</html>
