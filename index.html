@@ -11,11 +11,17 @@
                 ['text-input', { 'font-size': '18px' }],
                 ['text-button', { 'font-size': '20px' }],
             ],
+            shortcuts: [
+                {
+                'cus-checkbox': `relative w-15px h-15px appearance-none  
+                before:content-[''] before:w-15px before:h-15px  before:b-2px before:b-solid before:b-#999 before:absolute before:top-0 before:left-0 before:rounded-5px  checked:before:b-#8e6fa7  checked:before:bg-#8e6fa7
+                checked:after:content-[''] checked:after:w-8px checked:after:h-4px checked:after:rotate-[-45deg] checked:after:b-b-2px checked:after:b-l-2px  checked:after:b-l-solid checked:after:b-b-solid checked:after:b-#fff checked:after:absolute checked:after:inset-5px checked:after:m-auto`
+                }
+            ]
 
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/uno.global.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 </head>
 <body>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
@@ -38,59 +44,14 @@
 
             <button
                 class="w-full mb-5 rounded-3xl border-none py-4 text-20px text-white font-bold bg-[#8E6FA7]">送出並同意房仲聯絡</button>
-            <div class="w-full flex items-start gap-2">
-                <input id="agree" class=" agree mr-2" type="checkbox" checked>
-                <label for="agree" class="text-#999 text-input" >
+            <div class="w-full flex items-start gap-4">
+                <input id="agree" class="cus-checkbox" type="checkbox">
+                <label for="agree" class="text-#999 text-input">
                     我已閱讀並同意本網站的 <a href="#" class="text-#999">服務條款</a>、<a href="#" class="text-gray-400">隱私聲明</a>、<a
                         href="#" class="text-gray-400">免責聲明</a>
                 </label>
             </div>
         </div>
-
-        <style>
-            .agree {
-                position: relative;
-                width: 15px;
-                height: 15px;
-                appearance: none;
-
-            }
-
-            .agree::before {
-                content: '';
-                width: 15px;
-                height: 15px;
-                border: 2px solid #999;
-                position: absolute;
-                top: 0;
-                left: 0;
-                border-radius: 5px;
-
-            }
-
-            .agree:checked::before {
-                content: '';
-                width: 15px;
-                height: 15px;
-                border: 2px solid #8E6FA7;
-                background-color: #8E6FA7;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-
-            .agree:checked::after {
-                content: '';
-                width: 8px;
-                height: 4px;
-                rotate: -45deg;
-                border-bottom: 2px solid #fff;
-                border-left: 2px solid #fff;
-                position: absolute;
-                inset: 5px;
-                margin: auto;
-            }
-        </style>
     </div>
 
 
