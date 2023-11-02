@@ -15,9 +15,9 @@
         <div class="w-80% m-a ">
             <div class="scope w-full mb-8">
                 <label class="block font-bold my-3 text-xl">聯絡資料</label>
-                <input class="w-full  box-border p-2 font-bold b b-solid b-#ccc placeholder-#ccc  mb-3" type="text" maxlength="10"
+                <input class="w-full  box-border p-2 b b-solid b-#ccc placeholder-#ccc  mb-3" type="text" maxlength="10"
                     placeholder="您的稱呼(10字內)">
-                <input class="w-full  box-border p-2 font-bold b b-solid b-#ccc placeholder-#ccc" type="text" placeholder="您的手機號碼">
+                <input class="w-full  box-border p-2 b b-solid b-#ccc placeholder-#ccc" type="text" placeholder="您的手機號碼">
             </div>
             <div class="scope w-full mb-10">
                 <label class="block font-bold my-3 text-xl">想問什麼(非必填)</label>
@@ -37,3 +37,15 @@
         </div>
 
     </div>
+
+
+
+    <script>
+        liff.init({
+            liffId: '2001443124-PeL2BlwN',
+        }).then(() => {
+            console.log(liff.isLoggedIn());
+        });
+    </script>
+</body>
+</html>
