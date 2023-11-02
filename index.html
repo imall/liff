@@ -6,12 +6,14 @@
     <title>透過AI小幫手聯絡房仲</title>
     <script>
         window.__unocss = {
-          rules: [
-            ['text-head',{'font-size':'24px'}],
-            ['text-input',{'font-size':'22px'}],
-          ],
+            rules: [
+                ['text-head', { 'font-size': '24px' }],
+                ['text-input', { 'font-size': '22px' }],
+                ['text-button', { 'font-size': '20px' }],
+            ],
+
         }
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/uno.global.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
 </head>
@@ -22,10 +24,9 @@
         <div class="w-80% mx-a mt-8">
             <div class="scope w-full mb-8 ">
                 <label class="block font-bold my-3 text-head">聯絡資料</label>
-                <input
-                    class="w-full  box-border py-2 px-2 text-input b b-solid b-#999 placeholder-#999 rounded-3px  mb-3"
+                <input class="w-full box-border p-4 text-input b b-solid b-#999 placeholder-#999 rounded-3px  mb-3"
                     type="text" maxlength="10" placeholder="您的稱呼(10字內)">
-                <input class="w-full  box-border py-2 px-2 text-input b b-solid b-#999 placeholder-#999 rounded-3px"
+                <input class="w-full  box-border p-4 text-input b b-solid b-#999 placeholder-#999 rounded-3px"
                     type="text" placeholder="您的手機號碼">
             </div>
             <div class="scope w-full mb-10">
@@ -37,15 +38,59 @@
 
             <button
                 class="w-full mb-5 rounded-3xl border-none py-4 text-20px text-white font-bold bg-[#8E6FA7]">送出並同意房仲聯絡</button>
-            <div class="w-full flex items-start">
-                <input class="mr-2 relative top-3px" type="checkbox">
-                <span class="text-gray-400 text-20px">
+            <div class="w-full flex items-start gap-2">
+                <input id="agree" class=" agree mr-2" type="checkbox" checked>
+                <label for="agree" class="text-gray-400 text-button" >
                     我已閱讀並同意本網站的 <a href="#" class="text-#999">服務條款</a>、<a href="#" class="text-gray-400">隱私聲明</a>、<a
                         href="#" class="text-gray-400">免責聲明</a>
-                </span>
+                </label>
             </div>
         </div>
 
+        <style>
+            .agree {
+                position: relative;
+                width: 15px;
+                height: 15px;
+                appearance: none;
+
+            }
+
+            .agree::before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border: 2px solid #999;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 5px;
+
+            }
+
+            .agree:checked::before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                border: 2px solid #8E6FA7;
+                background-color: #8E6FA7;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .agree:checked::after {
+                content: '';
+                width: 8px;
+                height: 4px;
+                rotate: -45deg;
+                border-bottom: 2px solid #fff;
+                border-left: 2px solid #fff;
+                position: absolute;
+                inset: 5px;
+                margin: auto;
+            }
+        </style>
     </div>
 
 
