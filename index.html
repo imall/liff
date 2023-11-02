@@ -22,6 +22,9 @@
                 colors:{
                     primary:'#8E6FA7',
                     secondary:'#999',
+                },
+                fontFamily:{
+                    'ms': ['Microsoft JhengHei', 'sans-serif']
                 }
             }
 
@@ -32,9 +35,9 @@
 <body>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
-    <div class="w-full font-mono">
+    <div class="w-full font-ms">
         <div class="w-80% mx-a mt-8">
-            <div class="scope w-full mb-8 ">
+            <div class="scope w-full mb-5 ">
                 <label class="block font-bold my-3 t-title">聯絡資料</label>
                 <input class="w-full box-border p-4 t-input b b-solid b-secondary placeholder-secondary rounded-3px  mb-3"
                     type="text" maxlength="10" placeholder="您的稱呼(10字內)">
@@ -45,7 +48,7 @@
                 <label class="block font-bold my-3 t-title">想問什麼(非必填)</label>
                 <textarea
                     class="w-full rounded-1 resize-none overflow-hidden h-80px box-border p2 t-input b b-solid b-secondary placeholder-secondary rounded-3px"
-                    type="text" maxlength="50" placeholder="請入你的問題或備註，AI小幫手會先傳達給房仲經紀人(限50個字)"></textarea>
+                    type="text" maxlength="50" placeholder="請輸入你的問題或備註，AI小幫手會先傳達給房仲經紀人(限50個字)"></textarea>
             </div>
 
             <button
